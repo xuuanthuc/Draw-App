@@ -1,66 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="150dp"
     android:orientation="vertical"
     android:gravity="center"
-    android:layout_height="match_parent">
-
+    android:background="@drawable/border_radius"
+    android:layout_weight="1"
+    android:padding="20dp"
+    android:layout_height="300dp">
     <ImageButton
+        android:layout_weight="1"
         android:id="@+id/ib_brush_size_one"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:src="@drawable/size_one"
-        app:layout_constraintBottom_toBottomOf="@id/ib_brush_size_two"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/size_one"
+    />
     <ImageButton
+        android:layout_weight="1"
         android:id="@+id/ib_brush_size_two"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:src="@drawable/size_two"
-        app:layout_constraintBottom_toBottomOf="@id/ib_brush_size_three"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/ib_brush_size_one" />
-
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/size_two" />
     <ImageButton
+        android:layout_weight="1"
         android:id="@+id/ib_brush_size_three"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:src="@drawable/size_three"
-        app:layout_constraintBottom_toBottomOf="@id/ib_brush_size_four"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/ib_brush_size_two"
-         />
-
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/size_three"
+        />
     <ImageButton
+        android:layout_weight="1"
         android:id="@+id/ib_brush_size_four"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:src="@drawable/size_four"
-        app:layout_constraintBottom_toBottomOf="@id/ib_brush_size_five"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/ib_brush_size_three"
-         />
-
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/size_four"
+       />
     <ImageButton
+        android:layout_weight="1"
         android:id="@+id/ib_brush_size_five"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:src="@drawable/size_five"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/ib_brush_size_four" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/size_five"
+        />
+</LinearLayout>

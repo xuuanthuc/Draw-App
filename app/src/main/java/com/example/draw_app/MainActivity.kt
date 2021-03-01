@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         brushDialog.setTitle("Brush Size")
         val sizeOne = brushDialog.ib_brush_size_one
         sizeOne.setOnClickListener {
-            drawing_view.setSizeBrush(3.toFloat())
+            drawing_view.setSizeBrush(4.toFloat())
             brushDialog.dismiss()
         }
         val sizeTwo = brushDialog.ib_brush_size_two
@@ -33,19 +33,20 @@ class MainActivity : AppCompatActivity() {
         }
         val sizeThree = brushDialog.ib_brush_size_three
         sizeThree.setOnClickListener {
-            drawing_view.setSizeBrush(15.toFloat())
+            drawing_view.setSizeBrush(13.toFloat())
             brushDialog.dismiss()
         }
         val sizeFour = brushDialog.ib_brush_size_four
         sizeFour.setOnClickListener {
-            drawing_view.setSizeBrush(20.toFloat())
+            drawing_view.setSizeBrush(18.toFloat())
             brushDialog.dismiss()
         }
         val sizeFive = brushDialog.ib_brush_size_five
         sizeFive.setOnClickListener {
-            drawing_view.setSizeBrush(25.toFloat())
+            drawing_view.setSizeBrush(23.toFloat())
             brushDialog.dismiss()
         }
         brushDialog.show()
+        
     }
 }
