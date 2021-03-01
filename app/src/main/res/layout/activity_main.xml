@@ -9,10 +9,21 @@
     <com.example.draw_app.DrawingView
         android:id="@+id/drawing_view"
         android:layout_width="0dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/background_drawing_view_layout"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/ib_brush"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <ImageButton
+        android:layout_width="50dp"
+        android:id="@+id/ib_brush"
+        android:src="@drawable/size_three"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="50dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
