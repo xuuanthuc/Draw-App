@@ -141,6 +141,14 @@
         <ImageButton
             android:layout_width="40dp"
             android:layout_height="40dp"
+            android:id="@+id/ib_undo"
+            android:src="@drawable/ic_baseline_undo_24"
+            android:layout_margin="15dp"
+            android:background="@drawable/border_radius"
+            />
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:id="@+id/ib_brush"
             android:src="@drawable/ic_baseline_brush_24"
             android:layout_margin="15dp"
