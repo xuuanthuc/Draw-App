@@ -14,7 +14,7 @@ class DrawingView(context: Context, attrs: AttributeSet) : View(context, attrs) 
     private var mDrawingPaint: Paint? = null
     private var mCanvasPaint: Paint? = null
     private var mBrushSize: Float = 0.toFloat()
-    private var color = Color.GREEN
+    private var color = Color.RED
     private var canvas: Canvas? = null
     private val mPath = ArrayList<CustomPath>()
 
@@ -53,6 +53,10 @@ class DrawingView(context: Context, attrs: AttributeSet) : View(context, attrs) 
             mDrawingPaint!!.color = mDrawPath!!.color
             canvas.drawPath(mDrawPath!!, mDrawingPaint!!)
         }
+    }
+    fun setColor(newColor: String){
+        color = Color.parseColor(newColor)
+        mDrawingPaint!!.color = color
     }
 
     override fun onTouchEvent(event: MotionEvent?): Boolean {
