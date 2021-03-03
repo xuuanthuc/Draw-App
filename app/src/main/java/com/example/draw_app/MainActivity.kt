@@ -190,13 +190,23 @@ class MainActivity : AppCompatActivity() {
     }
 
     private inner class BitmapAsyncTask(val bitmap: Bitmap) : AsyncTask<Any, Void, String>() {
+
+        private lateinit var mProgressDialog: Dialog
+        override fun onPreExecute() {
+            super.onPreExecute()
+            showProgressDialog()
+        }
+
         override fun doInBackground(vararg params: Any?): String {
+
+
             var result = ""
             if (bitmap != null) {
                 try {
                     val bytes = ByteArrayOutputStream()
                     bitmap.compress(Bitmap.CompressFormat.PNG, 99, bytes)
-                    val f = File(externalCacheDir!!.absoluteFile.toString() + File.separator + "painting" + System.currentTimeMillis() / 100 + ".png")
+                    val f =
+                        File(externalCacheDir!!.absoluteFile.toString() + File.separator + "painting" + System.currentTimeMillis() / 100 + ".png")
                     val fo = FileOutputStream(f)
                     fo.write(bytes.toByteArray())
                     fo.close()
@@ -211,12 +221,28 @@ class MainActivity : AppCompatActivity() {
 
         override fun onPostExecute(result: String?) {
             super.onPostExecute(result)
-            if(result!!.isNotEmpty()){
-                Toast.makeText(this@MainActivity, "Save Success ${result}", Toast.LENGTH_LONG).show()
-            } else  {
-                Toast.makeText(this@MainActivity, "Something went wrong while saving file", Toast.LENGTH_LONG).show()
+            cancelProgress()
+            if (result!!.isNotEmpty()) {
+                Toast.makeText(this@MainActivity, "Save Success ${result}", Toast.LENGTH_LONG)
+                    .show()
+            } else {
+                Toast.makeText(
+                    this@MainActivity,
+                    "Something went wrong while saving file",
+                    Toast.LENGTH_LONG
+                ).show()
             }
 
+        }
+
+        private fun showProgressDialog() {
+            mProgressDialog = Dialog(this@MainActivity)
+            mProgressDialog.setContentView(R.layout.dialog_custom_progress)
+            mProgressDialog.show()
+        }
+
+        private fun cancelProgress() {
+            mProgressDialog.dismiss()
         }
 
     }
